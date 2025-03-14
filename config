@@ -50,15 +50,11 @@ tiling_drag modifier titlebar
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+a exec kitty
 
 # kill focused window
-bindsym $mod+q kill
 
-bindsym $mod+m exit
 
 # start dmenu (a program launcher)
-bindsym $mod+r exec rofi -show drun
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -96,14 +92,11 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+shift+f fullscreen toggle
 
-bindsym $mod+f exec firefox
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -197,3 +190,11 @@ client.unfocused  #000000 #000000 #888888 #292d2e   #000022
 
 exec_always nitrogen --restore
 exec_always clipit
+
+bindsym $mod+e exec thunar
+bindsym $mod+a exec kitty
+bindsym $mod+q kill
+bindsym $mod+m exit
+bindsym $mod+r exec i3-dmenu-desktop
+bindsym $mod+shift+f fullscreen toggle
+bindsym $mod+f exec firefox
